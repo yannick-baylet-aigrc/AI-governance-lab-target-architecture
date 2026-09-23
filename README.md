@@ -26,9 +26,15 @@ A more mature design introduces explicit governance and security control layers 
 ```mermaid
 flowchart TB
     H["Human Operator<br/>Approval / Oversight"] --> MP["Management Plane"]
-    HK["Hardware-backed Authorization<br/>e.g. FIDO2 Security Key"] -.-> PE["Policy Engine<br/>Access Control<br/>Risk Classification<br/>Approval Workflow"]
-    
-    MP ~~~ HK
+
+    subgraph TopLayer [ ]
+        direction LR
+        style TopLayer fill:transparent,stroke:none;
+        MP
+        HK["Hardware-backed Authorization<br/>e.g. FIDO2 Security Key"]
+    end
+
+    HK -.-> PE["Policy Engine<br/>Access Control<br/>Risk Classification<br/>Approval Workflow"]
     MP --> PE
     PE --> AL["Agent Layer<br/>Identity / Tools<br/>Least Privilege"]
     AL --> CE["Controlled Execution<br/>Sandbox / OS Security Controls"]
