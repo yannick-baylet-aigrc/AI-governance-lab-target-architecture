@@ -1,4 +1,4 @@
-# AI Governance Lab — Current vs. Target Architecture
+# Lab2: AI Governance Lab — Current vs. Target Architecture
 Purpose
 This lab explores the governance and security of locally deployed AI agents, with a focus on least privilege, human oversight, access control, network isolation, auditability, and controlled agent autonomy.
 The current implementation is deliberately simple and cost-efficient. The target architecture represents a theoretical, more mature governance model rather than a planned home infrastructure.
