@@ -23,13 +23,11 @@ The direct Ethernet link creates a small, private management path without requir
 Target Architecture
 A more mature design introduces explicit governance and security control layers between the agent and the underlying system.
 ```mermaid
-```mermaid
 flowchart TB
     H["Human Operator<br/>Approval / Oversight"] --> MP["Management Plane"]
 
     subgraph TopLayer [ ]
         direction LR
-        style TopLayer fill:transparent,stroke:none;
         MP
         HK["Hardware-backed Authorization<br/>e.g. FIDO2 Security Key"]
     end
@@ -43,6 +41,8 @@ flowchart TB
     AU["Audit & Monitoring<br/>Logs / Events / Traceability"] -.-> PE
     AU -.-> AL
     AU -.-> CE
+
+    style TopLayer fill:none,stroke:none;
 
     classDef human fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1.5px;
     classDef management fill:#e0f2fe,stroke:#0284c7,color:#0f172a,stroke-width:1.5px;
