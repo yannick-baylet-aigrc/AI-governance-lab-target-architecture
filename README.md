@@ -5,7 +5,7 @@ The current implementation is deliberately simple and cost-efficient. The target
 
 Current Architecture
 The real setup is intentionally compact: a laptop acts as the management console, while a dedicated local compute node runs the AI workloads without a permanent local display or keyboard.
-```
+```diff
 +--------------------------+         +-------------------------------+         +-----------------------------+
 |  Laptop / Management     | ------> |   Local AI Compute Node       | ------> |  Local Models / LLM Runtime |
 |         Console          |  (Ether |          (Headless)           |         |          & Agents           |
@@ -16,7 +16,7 @@ The direct Ethernet link creates a small, private management path without requir
 
 Target Architecture
 A more mature design introduces explicit governance and security control layers between the agent and the underlying system.
-```text
+```diff
 
 +--------------------------+
 |      Human Operator      |
