@@ -50,7 +50,7 @@ A more mature design introduces explicit governance and security control layers 
                              |                                                                    
                              v                                                                    
 +---------------------------------------------------------------+                                 
-|                        **AI Compute**                         |                                 
+|                        AI Compute                             |                                 
 |                         (Local LLMs)                          |                                 
 +---------------------------------------------------------------+                                 
 
