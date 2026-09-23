@@ -18,29 +18,45 @@ Target Architecture
 A more mature design introduces explicit governance and security control layers between the agent and the underlying system.
 ```
 
-[ Human Operator ]
-       (Approval / Oversight)
-             │
-             v
-      [ Management Plane ] ──────────────┐
-                                         v
-      [ Hardware-backed Auth ] ────> [ Policy Engine ]
-      (e.g., FIDO2 Security Key)     (Access Control / Risk / Workflow)
-                                         │
-                                         v
-                                   [ Agent Layer ]
-                               (Identity / Least Privilege)
-                                         │
-                                         v
-                               [ Controlled Execution ]
-                               (Sandbox / OS Security Controls)
-                                         │
-                                         v
-                                   [ AI Compute ]
-                                   (Local LLMs)
++-----------------------------------+
+|          Human Operator           |
+|      (Approval / Oversight)       |
++-----------------------------------+
+                  |
+                  v
++-----------------------------------+
+|         Management Plane          |
+|       (Orchestration Layer)       |
++-----------------------------------+
+                  |
+                  v
++-----------------------------------+         +-----------------------------------+
+|       Hardware-Backed Auth        | ------->|           Policy Engine           |
+|     (FIDO2 Security Key)          |         |  (Access Control / Risk / Flow)   |
++-----------------------------------+         +-----------------------------------+
+                                                                |
+                                                                v
+                                              +-----------------------------------+
+                                              |            Agent Layer            |
+                                              |    (Identity / Least Privilege)   |
+                                              +-----------------------------------+
+                                                                |
+                                                                v
+                                              +-----------------------------------+
+                                              |       Controlled Execution        |
+                                              |    (Sandbox / OS Security Ctrl)   |
+                                              +-----------------------------------+
+                                                                |
+                                                                v
+                                              +-----------------------------------+
+                                              |            AI Compute             |
+                                              |           (Local LLMs)            |
+                                              +-----------------------------------+
 
-      [ Audit & Monitoring ] ──────> (Tracks Logs, Events & Traceability across 
-       (Logs / Events)                Policy, Agent & Execution layers)
++-----------------------------------+
+|        Audit & Monitoring         | -------> (Tracks Logs, Events & Traceability
+|          (Logs / Events)          |           across Policy, Agent & Execution)
++-----------------------------------+
 
 ```
 ## Governance Principles
