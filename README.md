@@ -65,4 +65,4 @@ A more mature design introduces explicit governance and security control layers 
 * **Auditability:** All agent requests, tool calls, authorizations, and execution outcomes are logged for full traceability.
 * **Hardware-Backed Authorization:** Highly sensitive or critical operations mandate physical confirmation via a cryptographic hardware key.
 
-The objective is not to eliminate agent autonomy, but to make autonomy **bounded, observable, attributable, and reversible where possible**.
+The objective is not to eliminate agent autonomy, but to make this autonomy **bounded, observable, attributable, and reversible where possible**.
