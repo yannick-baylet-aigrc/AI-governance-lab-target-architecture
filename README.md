@@ -43,13 +43,16 @@ A more mature design introduces explicit governance and security control layers 
        (Logs / Events)                Policy, Agent & Execution layers)
 
 ```
-Governance Principles
-Least privilege: agents receive only the permissions required for their tasks.
-Separation of duties: requesting an action and authorizing a high-risk action are distinct functions.
-Human-in-the-loop: sensitive or irreversible actions require explicit human approval.
-Policy enforcement: agents interact with controlled tools rather than directly with the operating system.
-Defence in depth: operating-system controls, sandboxing, network controls and identity controls provide independent safeguards.
-Auditability: agent requests, tool calls, approvals and outcomes should be logged for traceability.
-Hardware-backed authorization: highly sensitive operations may require a physical cryptographic authenticator.
+## Governance Principles
+
+* **Least Privilege:** Agents receive only the permissions required to execute their specific tasks.
+* **Separation of Duties:** Requesting an action and authorizing a high-risk operation are handled as distinct, isolated functions.
+* **Human-in-the-Loop:** Sensitive, destructive, or irreversible actions require explicit human approval before execution.
+* **Policy Enforcement:** Agents must interact through controlled tools and APIs rather than directly manipulating the operating system.
+* **Defense in Depth:** Operating-system controls, sandboxing, network isolation, and identity verification provide independent layers of protection.
+* **Auditability:** All agent requests, tool calls, authorizations, and execution outcomes are logged for full traceability.
+* **Hardware-Backed Authorization:** Highly sensitive or critical operations mandate physical confirmation via a cryptographic hardware key.
+
+The objective is not to eliminate agent autonomy, but to make autonomy **bounded, observable, attributable, and reversible where possible**.
 
 The objective is not to eliminate agent autonomy, but to make this autonomy bounded, observable, attributable and reversible where possible.
