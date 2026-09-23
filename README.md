@@ -16,7 +16,7 @@ The direct Ethernet link creates a small, private management path without requir
 
 Target Architecture
 A more mature design introduces explicit governance and security control layers between the agent and the underlying system.
-```
+```text
 
 +--------------------------+
 |      Human Operator      |
