@@ -7,7 +7,7 @@ Current Architecture
 The real setup is intentionally compact: a laptop acts as the management console, while a dedicated local compute node runs the AI workloads without a permanent local display or keyboard.
 ```
 +--------------------------+         +-------------------------------+         +-----------------------------+
-|  Laptop / Management     | ------->|   Local AI Compute Node       | ------->|  Local Models / LLM Runtime |
+|  Laptop / Management     | ------> |   Local AI Compute Node       | ------> |  Local Models / LLM Runtime |
 |         Console          |  (Ether |          (Headless)           |         |          & Agents           |
 +--------------------------+   net)  +-------------------------------+         +-----------------------------+
 
