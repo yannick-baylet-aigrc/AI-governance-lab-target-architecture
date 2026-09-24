@@ -14,7 +14,7 @@ The real setup is intentionally compact: a laptop acts as the management console
 ```
 The direct Ethernet link creates a small, private management path without requiring the AI node to be directly exposed to the wider network.
 
-Target Architecture
+**Target Architecture**
 A more mature design introduces explicit governance and security control layers between the agent and the underlying system.
 ```text
 
