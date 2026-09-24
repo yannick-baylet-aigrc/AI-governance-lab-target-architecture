@@ -3,7 +3,7 @@ Purpose
 This lab explores the governance and security of locally deployed AI agents, with a focus on least privilege, human oversight, access control, network isolation, auditability, and controlled agent autonomy.
 The current implementation is deliberately simple and cost-efficient. The target architecture represents a theoretical, more mature governance model rather than a planned home infrastructure.
 
-Current Architecture
+## Current Architecture
 The real setup is intentionally compact: a laptop acts as the management console, while a dedicated local compute node runs the AI workloads without a permanent local display or keyboard.
 ```text
 +--------------------------+         +-------------------------------+         +-----------------------------+
@@ -15,6 +15,7 @@ The real setup is intentionally compact: a laptop acts as the management console
 The direct Ethernet link creates a small, private management path without requiring the AI node to be directly exposed to the wider network.
 
 **Target Architecture**
+
 A more mature design introduces explicit governance and security control layers between the agent and the underlying system.
 ```text
 
